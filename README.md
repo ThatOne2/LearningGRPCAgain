@@ -135,11 +135,11 @@ Step 1. Open two terminal windows
 
 Step 2. Start the server first
 
-You can do this by in the terminal cd'ing into it first ```cd .\server\ \``` (I'm on Windows)
+You can do this by in the terminal cd'ing into it first ```cd .\server\ ``` (I'm on Windows)
 and then running it there: ```go run main.go``` or just ``go run .``
 
 Step 3. Start a client (You can start more)
-in another terminal cd into the client folder ```cd .\client\ \``` 
+in another terminal cd into the client folder ```cd .\client\ ``` 
 and then running it there: ```go run main.go``` or just ``go run .``
 
 Step 4. Write your name in the client terminal! If everything went well the server will say hello to you!
