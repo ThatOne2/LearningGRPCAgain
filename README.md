@@ -1,5 +1,5 @@
-#Go GRPC tutorial 
-##Setup project
+# Go GRPC tutorial 
+## Setup project
 
 Step 1.
 
@@ -56,7 +56,7 @@ are not used and deletes them):
 
 ```go mod tidy```
 
-##Make A Server
+## Make A Server
 Step 1. Make a folder called server in the root folder 
 
 Step 2. In this folder create a main.go file.
@@ -113,7 +113,7 @@ func (s *server) SayHelloName(ctx context.Context, in *CoolName.Request) (*CoolN
 }
 ````
 
-##Make a Client
+## Make a Client
 Step 1. Make a folder called client in the root folder 
 
 Step 2. In this folder create a main.go file.
@@ -126,7 +126,7 @@ I made a scanner that takes input from the terminal in a loop that runs forever 
 Depending on the input it gets it sends one of two requests to the server.
 These two request are the ones defined in the proto file.
 
-##Run the program
+## Run the program
 Step 1. Open two terminal windows
 
 Step 2. Start the server first
