@@ -52,6 +52,8 @@ Then in the parent folder of the proto folder paste this into the terminal to au
 
 ___
 
+Step 5.
+
 Then run (After you have made proto files, otherwise it just sees that dependencies
 are not used and deletes them):
 
