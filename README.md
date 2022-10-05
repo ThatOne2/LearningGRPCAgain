@@ -67,7 +67,7 @@ Step 2. In this folder create a main.go file.
 
 Step 3. There are some code you just have to write to set up the server. See in server/main.go.
 (There are many ways to tweak this but if you have never done this before just follow along)
-Be very aware of the naming if you have changed the Service name in the proto. If you did you will have t put in your services name 
+Be very aware of the naming if you have changed the Service name in the proto. If you did you will have to put in your services name 
 into :
 
 (CoolName._something_ here is something I have made to refer to the proto files. See in server/main.go to understand why this is)
