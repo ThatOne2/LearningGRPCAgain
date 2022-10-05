@@ -6,7 +6,7 @@ Step 1.
 To make go mod file run in terminal:
 
 ``go mod init FolderName ``
-``(e.g: go mod init DISYS/ChittyChat)``
+``(e.g: go mod init LearningGRPCAgain)``
 
 Don't be confused by I have something called a go.sum. It gets made at some point lol
 
