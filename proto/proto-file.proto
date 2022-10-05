@@ -1,0 +1,40 @@
+//To tell what version of proto we are using
+syntax = "proto3";
+
+//What package (folder) i shall be made in
+package proto;
+
+//Something weird it has to have. It also has to have a slash for some reason
+//In more sophisticated programs this is usually a website (e.g. a github link)
+option go_package = "LearningGRPCAgain/proto";
+
+//The types of messages you can send
+//the name in a message will automatically be made with the first letter capitalised (here name wil be Name)
+message Request {
+  string name = 1;
+  //The numbers are just the order of the fields (so it will always be 1; 2; 3; 4; and so on)
+  //The next are just examples of what type you can also put in a message
+  //bool IsHappy = 2;
+  //int64 MyFaveNumber = 3;
+  //To see more cool things of types you can use go to https://developers.google.com/protocol-buffers/docs/proto3
+}
+
+message Response {
+  //everything in here will automatically be made with the first letter capitalised (here hello -> Hello and YourName -> YourName)
+  string hello = 1;
+  string YourName = 2;
+}
+
+//When you don't really want to send anything back but because this is GRPC you have to, so you just use this
+message Empty {}
+
+//We always have to have a service like so (can be named whatever)
+//It specifies the type of commands you can give
+service Service { //Our name for this is Service, t will be used to set up the server in the Server/main.go file (Later on in the tutorial)
+  //These two types of request response types will have to be made in the server
+  rpc SayHelloName(Request) returns (Response);
+  rpc SayHelloUser(Empty) returns (Response);
+}
+
+//The terminal command to compile this:
+//protoc --go_out=. --go_opt=paths=source_relative     --go-grpc_out=. --go-grpc_opt=paths=source_relative     proto/proto-file.proto
