@@ -44,12 +44,13 @@ just works.
 
 For very simple proto file see it in this repo.
 ___
+
 Step 4.
 
 Then in the parent folder of the proto folder paste this into the terminal to auto generate the GRPC go files.
 ``protoc --go_out=. --go_opt=paths=source_relative     --go-grpc_out=. --go-grpc_opt=paths=source_relative     proto/proto-file.proto``
 
----
+___
 
 Then run (After you have made proto files, otherwise it just sees that dependencies
 are not used and deletes them):
@@ -84,10 +85,13 @@ CoolName.Register[YOURCOOLNAME]Server(s, &server{}) //Has to have the name of yo
 ````
 
 ___
+
 Step 4.
 Make the methods that you defined in the proto file that the service would have. (If you
-look in my example it is SayHelloName and SayHelloUser)
----
+look in my example it is SayHelloName and SayHelloUser
+
+___
+
 **Little Explanation here:** 
 
 So we make two methods by these names in server so that the client can call them.
